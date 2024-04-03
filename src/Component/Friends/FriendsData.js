@@ -11,7 +11,7 @@ const FriendsData = (props) => {
 
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/friends/${id}`
+        `https://friends-nodejs.onrender.com/api/friends/${id}`
       );
       const friendsdata = {
         id: data.data._id,

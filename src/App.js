@@ -18,8 +18,8 @@ const App = () => {
 
   let fetchdata = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/friends");
-      console.log(res);
+      const res = await axios.get("https://friends-nodejs.onrender.com/api/friends");
+     
       setFriends(res.data);
     } catch (error) {
       if (error.message) {
