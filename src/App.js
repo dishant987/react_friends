@@ -19,6 +19,7 @@ const App = () => {
   let fetchdata = async () => {
     try {
       const res = await axios.get("https://friends-nodejs.onrender.com/api/friends");
+      
       setFriends(res.data);
     } catch (error) {
       if (error.message) {
