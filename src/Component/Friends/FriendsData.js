@@ -29,7 +29,7 @@ const FriendsData = (props) => {
   const deleteHandler = async (id) => {
     console.log(id);
     try {
-      const res = await axios.delete(`http://localhost:8080/api/friends/${id}`);
+      const res = await axios.delete(`https://friends-nodejs.onrender.com/api/friends/${id}`);
       if (res.data.message === "Deleted successfully") {
         toast.success(res.data.message);
         props.fetchdata();

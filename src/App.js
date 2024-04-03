@@ -66,7 +66,7 @@ const App = () => {
   const updateFriendsHandler = async (friend) => {
     console.log(friend);
       try {
-        const res = await axios.put('http://localhost:8080/api/friends',friend)
+        const res = await axios.put('https://friends-nodejs.onrender.com/api/friends',friend)
        if(res.data.success){
         toast.success(res.data.success)
         fetchdata()

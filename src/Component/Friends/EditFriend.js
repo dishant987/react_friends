@@ -30,7 +30,7 @@ const EditFriend = (props) => {
   let getdata = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/friends/${props.id}`
+        `https://friends-nodejs.onrender.com/api/friends/${props.id}`
       );
       setEnteredName(data.data.name);
       setEnteredMobile(data.data.mobilenum);
