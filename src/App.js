@@ -19,7 +19,6 @@ const App = () => {
   let fetchdata = async () => {
     try {
       const res = await axios.get("https://friends-nodejs.onrender.com/api/friends");
-     
       setFriends(res.data);
     } catch (error) {
       if (error.message) {
@@ -35,7 +34,7 @@ const App = () => {
 
   const addFriendsHandler = async (friend) => {
     try {
-      const res = await axios.post("http://localhost:8080/api/friends", friend);
+      const res = await axios.post("https://friends-nodejs.onrender.com/api/friends", friend);
 
       if (res.data.code === 400) {
         toast.error(res.data.message);
